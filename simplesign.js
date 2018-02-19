@@ -15,7 +15,14 @@ const simplesign = module.exports = {
       priv = new bitcore.PrivateKey(priv)
     return new message(msg).sign(priv)
   },
-  verify: (msg, sig, pub)=>new message(msg).verify(pub, sig),
+  verify: (msg, sig, pub)=>{
+    try {
+      const v = new message(msg).verify(pub, sig)
+    } catch(e) {
+      return false
+    }
+    return v
+  },
   hash: (value)=>{
     value = new Buffer(value)
     return bitcore.crypto.Hash.sha256(value).toString('hex')
