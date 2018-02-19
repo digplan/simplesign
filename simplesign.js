@@ -37,3 +37,6 @@ const simplesign = module.exports = {
   }
 }
 
+if(!module.parent){
+ console.log(simplesign[process.argv[2]].apply(this, process.argv.slice(3)))
+}

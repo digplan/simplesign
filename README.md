@@ -9,3 +9,11 @@ signer.sign(msg, privatekey)
 signer.verify(msg, signature, public)
 signer.hash(value)
 ````
+
+From command line
+````
+$ node simplesign newAddress
+$ node simplesign sign "my message" privkey
+$ node simplesign verify "my message" signature pubkey
+$ node simplesign hash "some text to hash"
+````
