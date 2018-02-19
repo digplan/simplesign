@@ -1,6 +1,6 @@
 {
   "name": "simplesign",
   "description": "Sign and verify messages with bitcoin compatible keys",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "simplesign.js"
 }
