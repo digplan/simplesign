@@ -16,8 +16,9 @@ const simplesign = module.exports = {
     return new message(msg).sign(priv)
   },
   verify: (msg, sig, pub)=>{
+    var v
     try {
-      const v = new message(msg).verify(pub, sig)
+      v = new message(msg).verify(pub, sig)
     } catch(e) {
       return false
     }
