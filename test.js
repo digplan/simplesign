@@ -1,4 +1,4 @@
-const signer = require('./simplesign.js')
+const signer = require('simplesign')
 
 console.log('Hash empty string', signer.hash(''))
 
