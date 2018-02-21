@@ -1,6 +1,10 @@
 {
   "name": "simplesign",
   "description": "Sign and verify messages with bitcoin compatible keys",
-  "version": "0.0.4",
-  "main": "simplesign.js"
+  "version": "0.0.5",
+  "main": "simplesign.js",
+  "dependencies": {
+    "bitcore-lib": "*"
+  },
+  "runkitExampleFilename": "test.js"
 }

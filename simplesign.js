@@ -1,5 +1,5 @@
 var bitcore = require('bitcore-lib')
-var message = require('bitcore-message')
+var message = require('./message.js')
 
 const simplesign = module.exports = {
   newAddress: ()=>{
