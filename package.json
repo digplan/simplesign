@@ -7,7 +7,7 @@
     "bitcore-lib": "*"
   },
   "scripts": {
-    "test": "test.js"
+    "test": "./test.js"
   },
   "runkitExampleFilename": "test.js"
 }
