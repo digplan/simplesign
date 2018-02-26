@@ -1,18 +1,21 @@
-const signer = require('simplesign')
+const signer = require('./simplesign.js')
 
+const pair = signer.newAddress()
+console.log('1 newAddress', pair)
+
+console.log('2 sign/verify', sig)
+sign('hello world', pair.public, pair.private)
+
+console.log('3 hash')
 console.log('Hash empty string', signer.hash(''))
 
-const public = '18Z98d6Ms4AEXh6ibpmjPyqUpAhfiY4DmN'
-const private = '5KhejCafYpYvPTjE6LhL95wdbnA8ABVc66UfdCWtn42qcTVHkgG'
-const message = 'hey there world'
-sign(message, public, private)
-console.log('is valid: ' + signer.isValid(public))
-console.log('is valid: ' + signer.isValid(private))
-console.log('is valid: ' + signer.isValid('x'))
+console.log('4 isValid')
+console.log('expect valid: ' + signer.isValid(pair.public))
+console.log('expect valid: ' + signer.isValid(pair.private))
+console.log('expect NOT valid: ' + signer.isValid(''))
 
-const newaddress = signer.newAddress()
-console.log('New address', newaddress)
-sign(message, newaddress.public, newaddress.private)
+console.log('5 sign/verify file')
+sign('./simplesign.js', pair.public, pair.private)
 
 function sign(msg, pub, pri){
  console.log(`Signing msg ${msg} for public ${pub} and private ${pri}`)
