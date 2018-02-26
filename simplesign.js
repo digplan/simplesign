@@ -1,5 +1,6 @@
 var bitcore = require('bitcore-lib')
 var message = require('./message.js')
+const fs = require('fs')
 
 const simplesign = module.exports = {
   newAddress: ()=>{
@@ -11,6 +12,8 @@ const simplesign = module.exports = {
     }
   },
   sign: (msg, priv)=>{
+    if(fs.existsSync(msg))
+      msg = fs.readFileSync(msg).toString('base64')
     if(typeof priv === 'string')
       priv = new bitcore.PrivateKey(priv)
     return new message(msg).sign(priv)
