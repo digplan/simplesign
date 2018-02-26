@@ -1,7 +1,7 @@
 {
   "name": "simplesign",
   "description": "Sign and verify messages with bitcoin compatible keys",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "simplesign.js",
   "dependencies": {
     "bitcore-lib": "*"
