@@ -20,6 +20,8 @@ const simplesign = module.exports = {
   },
   verify: (msg, sig, pub)=>{
     var v
+    if(fs.existsSync(msg))
+      msg = fs.readFileSync(msg).toString('base64')
     try {
       v = new message(msg).verify(pub, sig)
     } catch(e) {
