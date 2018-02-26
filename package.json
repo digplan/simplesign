@@ -6,5 +6,8 @@
   "dependencies": {
     "bitcore-lib": "*"
   },
+  "scripts": {
+    "test": "test.js"
+  },
   "runkitExampleFilename": "test.js"
 }
