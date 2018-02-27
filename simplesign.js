@@ -1,14 +1,20 @@
+var crypto = require('crypto')
 var bitcore = require('bitcore-lib')
 var message = require('./message.js')
 const fs = require('fs')
 
 const simplesign = module.exports = {
-  newAddress: ()=>{
-    const priv = new bitcore.PrivateKey()
-    const addr = priv.toAddress()
+  newAddress: (wif)=>{
+    if(wif){
+      var priv = new bitcore.PrivateKey.fromWIF(wif)
+    } else {
+      var priv = new bitcore.PrivateKey() 
+    }
     return {
-      'public': String(addr),
-      'private': priv.toWIF()
+      'public': String(priv.toPublicKey()),
+      'public_addr': String(priv.toAddress()),
+      'private': priv.toString(),
+      'private_wif': priv.toWIF()
     }
   },
   sign: (msg, priv)=>{
@@ -16,7 +22,8 @@ const simplesign = module.exports = {
       msg = fs.readFileSync(msg).toString('base64')
     if(typeof priv === 'string')
       priv = new bitcore.PrivateKey(priv)
-    return new message(msg).sign(priv)
+    const sig = new message(msg).sign(priv)
+    return new Buffer(sig, 'base64').toString('hex').slice(64)
   },
   verify: (msg, sig, pub)=>{
     var v
@@ -30,8 +37,7 @@ const simplesign = module.exports = {
     return v
   },
   hash: (value)=>{
-    value = new Buffer(value)
-    return bitcore.crypto.Hash.sha256(value).toString('hex')
+    return crypto.createHash('sha256').update(value).digest('hex')
   },
   isValid: (s)=>{
     if(bitcore.Address.isValid(s))

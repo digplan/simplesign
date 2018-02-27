@@ -4,7 +4,8 @@
   "version": "0.0.7",
   "main": "simplesign.js",
   "dependencies": {
-    "bitcore-lib": "*"
+    "bitcore-lib": "*",
+    "secp256k1": "^3.5.0"
   },
   "scripts": {
     "test": "./test.js"
