@@ -76,3 +76,7 @@ Don't we desperately need digital signing mechanisms that are easily adopted, to
 None.  This project will be promoted and an outreach effort will be made to industry contacts once we get close to ALPHA release.
 
 # Why is this needed?
+
+# Similar efforts
+
+# Other information
