@@ -2,7 +2,7 @@
 
 SimpleSign https://github.com/digplan/simplesign
 
-SimpleSign is a cross-platform technology that enables non-technical people anywhere in the world to easily prove identity, sign and verify any digital file, authenticate without passwords, and send encrypted information.
+SimpleSign is a cross-platform technology that enables non-technical people, machines, and IOT devices anywhere in the world to easily prove identity, sign and verify any digital file, authenticate without passwords, and send encrypted information.
 
 We are not inventing new cryptography.  Outstanding cryptography already exists.  But, its too difficult to use for the non-technical person.  SS leverages existing proven cryptographic methods, in a way that makes it very easy for anyone to use.
 
@@ -73,10 +73,21 @@ Don't we desperately need digital signing mechanisms that are easily adopted, to
 
 # What community exists?
 
-None.  This project will be promoted and an outreach effort will be made to industry contacts once we get close to ALPHA release.
+The project is freely available on GitHub at https://github.com/digplan/simplesign
+This project will be promoted and an outreach effort will be made to developers, influencers, and industry contacts once we get closer to ALPHA release.
 
 # Why is this needed?
 
+The landscape of the Internet has evolved to the point where the vast majority of users are non-technical people.  People's lives now DEPEND on the Internet, and the magnitude is even still increasing.  This is a multi-decade trend.  The internet explosion was only possible because the protocols were somewhat simple (and text based).  But, the core internet technologies such as HTTP, DNS, etc.. also are too insecure by nature, in a world where organizations and governments are activly involved in weaponizing the Internet.  
+
+There are many efforts to invent and evolve new technologies, but evolving existing technologies, such as PGP (for email encryption), is problematic, because too often they are too technical to implement and use.
+
 # Similar efforts
+
+The cryptocurrency efforts are seeking to bring safe and trustless money to the Internet.  Major companies are working on both proprietary and universal standards to address security and privacy issues, but often addressing more specific use cases. 
+
+But, recent history has shown us that universal standards (SAML, XML, etc..) have been complicated and difficult to implement, and technologies that are difficult to implement WILL NOT be widely adopted, or must be revised later to simplify them, because of the cost and difficulty of implementing them.  Take OAuth for instance.  OAuth version 1 was easy to understand and implement.  The OAuth 2 spec is 75 pages.  Take for instance, 3rd party Twitter apps.  Many were discontinued when Twitter stopped support for Oauth1, because of the difficulty in implementing OAuth 2.  SimpleSign, or an equivilant 
+
+SimpleSign is a foundational Internet technology that is not competitive with these, but may augment them.  SimpleSign is also unique because it is less-engineered, and easily compatible with other privacy/protection technologies.
 
 # Other information
