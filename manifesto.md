@@ -70,6 +70,8 @@ The existing landscape of privacy, security, and identity on the global Internet
 
 For instance, we are very close to the point where fake audio and video can be created that depict anything, and will be impossible to tell from real video.  This is incredibly dangerous without means to "sign" videos that you have created.  A provider, such as YouTube, could be trusted to validate your authorship - and now you have completely lost the right to be anonymous on the Internet - and that right is gone forever.
 
+Every password breach including the high-profile Equifax (143 million users), Yahoo (3 billion users), eBay (145 million users), and many others, have proven that no service provider, no matter how wealthy or well known the company, is exempt.  Now imagine if user data was signed and no passwords existed on the servers to be stolen.  Many Bitcoin holds would be much happier (and richer) if they never gave up their private keys to exchanges.
+
 These technologies must be EASY to adopt and implement.
 
 # Similar efforts
