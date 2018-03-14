@@ -8,7 +8,7 @@
     "secp256k1": "^3.5.0"
   },
   "scripts": {
-    "test": "test.js"
+    "test": "node test.js"
   },
   "runkitExampleFilename": "test.js"
 }
