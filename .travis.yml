@@ -3,7 +3,7 @@ node_js:
  - "node"
 dist: trusty
 install: true
-before_script: chmod 0777 ./test.js
+before_script: npm i && chmod 0777 ./test.js
 deploy:
   provider: npm
   email: digplan@outlook.com
