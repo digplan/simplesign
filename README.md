@@ -1,6 +1,6 @@
 # Simplesign
 
-Sign and verify messages with public/private keys.  Uses bitcoin addresses and private keys in WIF format.    
+Sign and verify messages with public/private keys.  Compatible with bitcoin addresses and private WIF format.    
 
 ````
 const simpsign = require('simplesign')
