@@ -8,6 +8,7 @@ const simpsign = require('simplesign')
 const pair1 = simpsign.newKeysFromWords('RANDOM WORDS SELECT MORE RANDOM WORDS THAN THESE')
 const pair2 = simpsign.newKeysfromPrivateKey('0C28FCA386C7A227600B2FE50B7CAE1EC86D3BF1FBE471BE89827E19D72AA1D')
 const pair3 = simpsign.newKeysFromWIF('5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ')
+const pair4 = simpsign.newKeys()  // Random
 
 pair3.public.toString()
 // 0C28FCA386C7A227600B2FE50B7CAE1EC86D3BF1FBE471BE89827E19D72AA1D
